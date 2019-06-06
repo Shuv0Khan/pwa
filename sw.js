@@ -1,9 +1,9 @@
 
 const staticAssests = [
-  '../',
-  '../pwa/ShareX_Logo_1024.png',
-  '../pwa/style.css',
-  '../pwa/pwatest.js',
+  '/',
+  '/ShareX_Logo_1024.png',
+  '/style.css',
+  '/pwatest.js',
 ];
 
 self.addEventListener('install', event=>{
@@ -24,8 +24,6 @@ self.addEventListener('fetch', event=>{
 
 async function cacheFirst(req){
   console.dir(req);
-
-  
   const cacheMatch = await caches.match(req);
   return cacheMatch || fetch(req);
 }
